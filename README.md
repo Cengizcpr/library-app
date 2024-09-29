@@ -1,6 +1,6 @@
-# Library APP
+# Library APP (Postman koleksiyonunu proje içerisinde bulabilirsiniz.)
 
-Add and edit the .env file for the project.
+Proje için .env dosyasını ekleyin ve düzenleyin.
 * DB_HOST = localhost
 * DB_USER = username
 * DB_PASS = password
