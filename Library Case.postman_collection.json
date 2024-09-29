@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "f787bd94-3cbf-4b66-91e2-d5b6cc50657d",
+		"name": "Library Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8169663"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User All List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{server}}users",
+							"host": [
+								"{{server}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Find",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{server}}users/1",
+							"host": [
+								"{{server}}users"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "copurcengizhan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Cengizhan Çopur",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "05530130692",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}users",
+							"host": [
+								"{{server}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Token Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "copurcengizhan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}users/login",
+							"host": [
+								"{{server}}users"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Book Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJjb3B1cmNlbmdpemhhbkBnbWFpbC5jb20iLCJpYXQiOjE3Mjc2MTA4OTMsImV4cCI6MTcyNzYxNDQ5M30.kXmpA20znqaFD3IvbUbvR032H4HKHr3Fem9XTZ4GR-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Kitap Adı 2",
+									"type": "text"
+								},
+								{
+									"key": "barcode",
+									"value": "0002",
+									"type": "text"
+								},
+								{
+									"key": "book_type",
+									"value": "Polisiye",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2024",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Yazar Ad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}books",
+							"host": [
+								"{{server}}books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Score",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJjb3B1cmNlbmdpemhhbkBnbWFpbC5jb20iLCJpYXQiOjE3Mjc2MTA4OTMsImV4cCI6MTcyNzYxNDQ5M30.kXmpA20znqaFD3IvbUbvR032H4HKHr3Fem9XTZ4GR-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "score",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "bookId",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}books/score",
+							"host": [
+								"{{server}}books"
+							],
+							"path": [
+								"score"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJjb3B1cmNlbmdpemhhbkBnbWFpbC5jb20iLCJpYXQiOjE3Mjc2MTA4OTMsImV4cCI6MTcyNzYxNDQ5M30.kXmpA20znqaFD3IvbUbvR032H4HKHr3Fem9XTZ4GR-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Kitap Adı Güncelleme 1",
+									"type": "text"
+								},
+								{
+									"key": "barcode",
+									"value": "0001",
+									"type": "text"
+								},
+								{
+									"key": "book_type",
+									"value": "Polisiye",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2024",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Yazar Adı Örnek",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}books",
+							"host": [
+								"{{server}}books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}books",
+							"host": [
+								"{{server}}books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}books/1",
+							"host": [
+								"{{server}}books"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Books Find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}books/2",
+							"host": [
+								"{{server}}books"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
